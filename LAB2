@@ -1,0 +1,49 @@
+Console.Write("Enter score: ");
+int num = int.Parse(Console.ReadLine());
+
+if (num> 100 || num < 0)
+{
+    Console.WriteLine("invalid score");
+}
+else if (num >= 90)
+{
+    Console.WriteLine("Grade: A");
+}
+else if (num >= 80)
+{
+    Console.WriteLine("Grade: B");
+}
+else if (num >= 70) { 
+    Console.WriteLine("Grade: C");
+}
+else if (num >= 60)
+{
+    Console.WriteLine("Grade: D");
+}
+else if (num < 60)
+{
+    Console.WriteLine("Grade: F");
+}
+
+
+
+
+Console.Write("Number (0 to stop): ");
+int num = int.Parse(Console.ReadLine());
+int count = 0,sum=0;
+while(num != 0)
+{
+    count++;
+    sum += num;
+    Console.Write("Number (0 to stop): ");
+    num = int.Parse(Console.ReadLine());
+}
+if(count==0)
+{
+    Console.WriteLine("No numbers were entered.");
+}
+else
+{
+    double average = (double)sum / count;
+    Console.WriteLine($"Count: {count}, Sum: {sum}, Average: {average}");
+}
